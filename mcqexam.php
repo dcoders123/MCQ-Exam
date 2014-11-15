@@ -33,7 +33,7 @@ if(!mysql_connect ($mysql_host, $mysql_user , $mysql_pass) || !mysql_select_db($
 MCQ Exam
 </title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script src="jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
 </head>
 <h1>MCQ Exam , Welcome <?php echo"$loginid"; ?></h1>
 <body>
@@ -43,7 +43,7 @@ MCQ Exam
                         
                     </div>
 
-                    <script type="text/javascript" src="C3counter.js"></script>
+                    <script type="text/javascript" src="js/C3counter.js"></script>
                     <script type="text/javascript">
                         // Default options
                         C3Counter("counter", { startTime: 60 });
