@@ -37,19 +37,7 @@ MCQ Exam
 </head>
 <h1>MCQ Exam , Welcome <?php echo"$loginid"; ?></h1>
 <body>
-        <div>
-                <div class="special">
-                    <div id="counter">
-                        
-                    </div>
 
-                    <script type="text/javascript" src="js/C3counter.js"></script>
-                    <script type="text/javascript">
-                        // Default options
-                        C3Counter("counter", { startTime: 60 });
-                    </script>
-                </div>
-        </div>
 <?php
 
 if($_SESSION['check']==2){
@@ -154,6 +142,20 @@ if($_SESSION['check']==2){
 }
 
 else{
+	
+	      echo "<div>
+                <div class='special'>
+                    <div id='counter'>
+                        
+                    </div>
+
+                    <script type='text/javascript' src='js/C3counter.js'></script>
+                    <script type='text/javascript'>
+                        // Default options
+                        C3Counter('counter', { startTime: 60 });
+                    </script>
+                </div>
+        </div>";
 
 	$query="CREATE TEMPORARY TABLE IF NOT EXISTS temp AS (SELECT * FROM Question_bank ORDER BY RAND() limit 4)";
 
