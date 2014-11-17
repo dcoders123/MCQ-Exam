@@ -11,7 +11,7 @@ $mysql_db ='Online_Exam';
 
 if(!mysql_connect ($mysql_host, $mysql_user , $mysql_pass) || !mysql_select_db($mysql_db)){
 
-die($conn_error);
+	die($conn_error);
 
 }
 
@@ -69,30 +69,30 @@ if(isset($_POST['loginid'])){
 
 }
 
- 
-        if(isset($_POST['loginid1'])){
-        $firstname1=$_POST['firstname1'];
-        $lastname1=$_POST['lastname1'];
-        $identity=$_POST['identity'];
-        $loginid1=$_POST['loginid1'];
-        $password1=$_POST['password1'];
+
+if(isset($_POST['loginid1'])){
+	$firstname1=$_POST['firstname1'];
+	$lastname1=$_POST['lastname1'];
+	$identity=$_POST['identity'];
+	$loginid1=$_POST['loginid1'];
+	$password1=$_POST['password1'];
 
 
 
-        $query="INSERT INTO Student VALUES('".mysql_real_escape_string($firstname1)."','".mysql_real_escape_string($lastname1)."','".mysql_real_escape_string($loginid1)."','".mysql_real_escape_string($password1)."','".mysql_real_escape_string($identity)."')";
-        if($query_run = mysql_query($query))   {
+	$query="INSERT INTO Student VALUES('".mysql_real_escape_string($firstname1)."','".mysql_real_escape_string($lastname1)."','".mysql_real_escape_string($loginid1)."','".mysql_real_escape_string($password1)."','".mysql_real_escape_string($identity)."')";
+	if($query_run = mysql_query($query))   {
 
 		
 		header("Location:mbox/registersuccess.php");
 
-        }
-        else{
+	}
+	else{
 
 		header("Location:mbox/registerfail.php");
-        }
+	}
 
-        }
-        
+}
+
 ?>
 
 
@@ -380,7 +380,6 @@ if(isset($_POST['loginid'])){
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
@@ -392,56 +391,43 @@ if(isset($_POST['loginid'])){
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
+                                    <h4>2014</h4>
                                     <h4 class="subheading">Our Humble Beginnings</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">Finally, we have started from 1st November 2014 to give shape to our website whithin days our website came into existence. </p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>December 2012</h4>
+                                    <h4>15 November 2014</h4>
                                     <h4 class="subheading">Transition to Full Service</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">Today we completed our website and the initial version ready to use.</p>
                                 </div>
                             </div>
                         </li>
-                        <li class="timeline-inverted">
+                        <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>July 2014</h4>
-                                    <h4 class="subheading">Phase Two Expansion</h4>
+                                    <h4>2020</h4>
+                                    <h4 class="subheading">Our future plans</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">We will extend the website to larger scale, our next version will include a more robust design and many more features.</p>
                                 </div>
                             </div>
                         </li>
+                        
                         <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <h4>
@@ -462,68 +448,37 @@ if(isset($_POST['loginid'])){
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
+
+                        <h4>Ayush Garg</h4>
                         <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                        
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                        
+                        <h4>Ritesh Kumar</h4>
+                        <p class="text-muted">Lead Coder</p>
+                        
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                        
+                        <h4>Shivansh Sapra</h4>
+                        <p class="text-muted">Assistant coder and designer</p>
+                        
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+				   <p class="large text-muted">With the co-ordination of our team members finally we are able to make such a good website.</p>
                 </div>
             </div>
         </div>
