@@ -170,7 +170,6 @@ else{
 
 		if($query_num_rows2==4){
 
-			echo 'value selected';
 		}else{ echo 'value not selected from temp';}
 
 
