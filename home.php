@@ -31,7 +31,7 @@ if(isset($_POST['loginid'])){
 	
 	if($query_num_rows2>=1){
 
-		$query3="SELECT  Password FROM Student WHERE Password='$password'"; 
+		$query3="SELECT Password FROM Student WHERE BINARY Password='$password'"; 
 		$query_run3 = mysql_query($query3) ;
 		$query_num_rows3= mysql_num_rows($query_run3);
 		
